@@ -12,7 +12,6 @@ static BYTE rofHookCode[] = {
 	0x90, 0x90, 0x90, 0x90, 0x90, 0x90, 0x90				// NOPs									# (0x07)
 }; 
 
-// will this be executable memory? might need to alloc it somewhere instead? maybe just need to give it execute permission?
 // We overwrite 13 bytes of code with the hooking code, we still need that calculation done though so it's moved to the shellcode.
 static BYTE rofShellcode[] = { 
 	0x8B, 0x46, 0x0C,										// mov eax,[esi+0C]						# (0x00) code moved from hook location
